@@ -1,0 +1,6 @@
+PySol solitaire cardset;4;.gif;1;52;0
+1000_oxymoron_073097;Oxymoron
+73 97 8
+18 18 7 7
+back001.gif
+back001.gif;back101.gif;back102.gif;back111.gif;back191.gif;back192.gif
