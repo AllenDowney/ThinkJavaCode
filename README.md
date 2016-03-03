@@ -13,10 +13,13 @@ If you don't already have a GitHub account, you'll need to create one.
 After forking, you'll have your own repository on GitHub that you can use to keep track of code you write.
 Then you can ``clone'' the repository, which downloads a copy of the files to your computer.
 
-*   Or you could clone the repository without forking.
-If you choose this option, you don't need a GitHub account, but you won't be able to save your changes back in GitHub.
+*   Or you could clone the repository without forking.  If you choose this option, you don't need a GitHub account, but you won't be able to save your changes back in GitHub.
 
 *   If you don't want to use Git at all, you can download the code in a zip archive using the "Download ZIP" button on this page, or [this link](http://tinyurl.com/ThinkJavaCodeZip).
+
+To clone a repository, you need a Git client installed on your computer.  The URL of this repository is `https://github.com/AllenDowney/ThinkJavaCode.git`.  If you use Git from the command line, you can clone it like this:
+
+    git clone https://github.com/AllenDowney/ThinkJavaCode.git
 
 After you clone the repository or unzip the zip file, you should have a directory called `ThinkJavaCode` with a subdirectory for each chapter in the book.
 
