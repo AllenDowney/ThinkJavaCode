@@ -41,11 +41,11 @@ public class Tables {
     }
 
     public static void example3() {
-        final double log2 = Math.log(2);
+        final double LOG2 = Math.log(2);
         int i = 1;
         while (i < 100) {
             double x = (double) i;
-            System.out.println(x + "   " + Math.log(x) / log2);
+            System.out.println(x + "   " + Math.log(x) / LOG2);
             i = i * 2;
         }
     }
