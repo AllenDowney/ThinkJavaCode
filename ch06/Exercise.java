@@ -1,5 +1,5 @@
 public class Exercise {
-    
+
     public static void main(String[] args) {
         boolean flag1 = isHoopy(202);
         boolean flag2 = isFrabjuous(202);
@@ -12,7 +12,7 @@ public class Exercise {
             System.out.println("pong!");
         }
     }
-    
+
     public static boolean isHoopy(int x) {
         boolean hoopyFlag;
         if (x % 2 == 0) {
@@ -22,7 +22,7 @@ public class Exercise {
         }
         return hoopyFlag;
     }
-    
+
     public static boolean isFrabjuous(int x) {
         boolean frabjuousFlag;
         if (x > 0) {
@@ -32,5 +32,5 @@ public class Exercise {
         }
         return frabjuousFlag;
     }
-    
+
 }
