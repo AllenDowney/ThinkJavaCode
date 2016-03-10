@@ -28,13 +28,6 @@ public class StringsThings {
         }
         System.out.println();
 
-        String fruit = "banana";
-
-        for (int i = 0; i < fruit.length(); i++) {
-            char letter = fruit.charAt(i);
-            System.out.println(letter);
-        }
-
         String name1 = "Alan Turing";
         String name2 = "Ada Lovelace";
         if (name1.equals(name2)) {
@@ -50,6 +43,17 @@ public class StringsThings {
             System.out.println("name2 comes before name1.");
         }
 
-        System.out.println(reverse(name1));
+        String fruit = "banana";
+
+        for (int i = 0; i < fruit.length(); i++) {
+            char letter = fruit.charAt(i);
+            System.out.println(letter);
+        }
+
+        for (char letter : fruit.toCharArray()) {
+            System.out.println(letter);
+        }
+
+        System.out.println(reverse(fruit));
     }
 }
