@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Loops {
-    
+
     public static void countdown(int n) {
         while (n > 0) {
             System.out.println(n);
@@ -9,7 +9,7 @@ public class Loops {
         }
         System.out.println("Blastoff!");
     }
-    
+
     public static void sequence(int n) {
         while (n != 1) {
             System.out.println(n);
@@ -20,7 +20,7 @@ public class Loops {
             }
         }
     }
-    
+
     public static double scanDouble() {
         Scanner in = new Scanner(System.in);
         boolean okay;
@@ -37,7 +37,7 @@ public class Loops {
         double x = in.nextDouble();
         return x;
     }
-    
+
     public static double scanDouble2() {
         Scanner in = new Scanner(System.in);
         while (true) {
@@ -51,7 +51,7 @@ public class Loops {
         double x = in.nextDouble();
         return x;
     }
-    
+
     public static double addNumbers() {
         Scanner in = new Scanner(System.in);
         int x = -1;
@@ -66,13 +66,13 @@ public class Loops {
         }
         return sum;
     }
-    
+
     public static void main(String[] args) {
         System.out.println("countdown");
         countdown(3);
-        
+
         System.out.println("sequence");
         sequence(10);
     }
-    
+
 }
