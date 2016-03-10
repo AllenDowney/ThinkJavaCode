@@ -67,35 +67,6 @@ public class ArrayExamples {
     }
 
     /**
-     * Example code related to histograms.
-     */
-    public static void makeHistogram() {
-        int numValues = 8;
-        int[] array = randomArray(numValues);
-        printArray(array);
-
-        int[] scores = randomArray(30);
-        int a = inRange(scores, 90, 100);
-        int b = inRange(scores, 80, 90);
-        int c = inRange(scores, 70, 80);
-        int d = inRange(scores, 60, 70);
-        int f = inRange(scores, 0, 60);
-
-        // making a histogram
-        int[] counts = new int[100];
-        for (int i = 0; i < scores.length; i++) {
-            int index = scores[i];
-            counts[index]++;
-        }
-
-        // histogram with enhanced for loop
-        counts = new int[100];
-        for (int score : scores) {
-            counts[score]++;
-        }
-    }
-
-    /**
      * Prints the elements of an array.
      */
     public static void printArray(int[] array) {
@@ -152,5 +123,34 @@ public class ArrayExamples {
             }
         }
         return count;
+    }
+
+    /**
+     * Example code related to histograms.
+     */
+    public static void makeHistogram() {
+        int numValues = 8;
+        int[] array = randomArray(numValues);
+        printArray(array);
+
+        int[] scores = randomArray(30);
+        int a = inRange(scores, 90, 100);
+        int b = inRange(scores, 80, 90);
+        int c = inRange(scores, 70, 80);
+        int d = inRange(scores, 60, 70);
+        int f = inRange(scores, 0, 60);
+
+        // making a histogram
+        int[] counts = new int[100];
+        for (int i = 0; i < scores.length; i++) {
+            int index = scores[i];
+            counts[index]++;
+        }
+
+        // histogram with enhanced for loop
+        counts = new int[100];
+        for (int score : scores) {
+            counts[score]++;
+        }
     }
 }
