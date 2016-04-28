@@ -1,5 +1,5 @@
 /**
- * Examples from Chapter 7.
+ * Generating tables; encapsulation and generalization.
  */
 public class Tables {
 

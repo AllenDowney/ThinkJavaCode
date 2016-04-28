@@ -12,12 +12,12 @@ public class Series {
         }
     }
 
-    public static double area(double radius) {
-        double area = Math.PI * radius * radius;
-        return area;
+    public static double calculateArea(double radius) {
+        double result = Math.PI * radius * radius;
+        return result;
     }
 
-    public static double area2(double radius) {
+    public static double calculateArea2(double radius) {
         return Math.PI * radius * radius;
     }
 
@@ -59,13 +59,13 @@ public class Series {
     public static double circleArea
             (double xc, double yc, double xp, double yp) {
         double radius = distance(xc, yc, xp, yp);
-        double area = area(radius);
+        double area = calculateArea(radius);
         return area;
     }
 
-    public static double area
+    public static double calculateArea
             (double xc, double yc, double xp, double yp) {
-        return area(distance(xc, yc, xp, yp));
+        return calculateArea(distance(xc, yc, xp, yp));
     }
 
     /**
@@ -106,17 +106,17 @@ public class Series {
         countup(3);
         System.out.println("Have a nice day.");
 
-        System.out.println("area");
-        System.out.println(area(3.0));
+        System.out.println("calculateArea");
+        System.out.println(calculateArea(3.0));
 
-        System.out.println("area2");
-        System.out.println(area2(3.0));
+        System.out.println("calculateArea2");
+        System.out.println(calculateArea2(3.0));
 
         System.out.println("circleArea");
         System.out.println(circleArea(1.0, 2.0, 4.0, 6.0));
 
-        System.out.println("area with 4 doubles");
-        System.out.println(area(1.0, 2.0, 4.0, 6.0));
+        System.out.println("calculateArea with 4 doubles");
+        System.out.println(calculateArea(1.0, 2.0, 4.0, 6.0));
 
         System.out.println("absolute value");
         System.out.println(absoluteValue(-2));
@@ -133,11 +133,11 @@ public class Series {
         System.out.println(isSingleDigit(2));
         boolean bigFlag = !isSingleDigit2(17);
 
-        int i = 9;
-        if (isSingleDigit(i)) {
-            System.out.println("i is small");
+        int z = 9;
+        if (isSingleDigit(z)) {
+            System.out.println("z is small");
         } else {
-            System.out.println("i is big");
+            System.out.println("z is big");
         }
 
         System.out.println("factorial");

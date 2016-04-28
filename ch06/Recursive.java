@@ -8,7 +8,7 @@ public class Recursive {
         if (m == n) {
             return n;
         } else {
-            int recurse = prod(m, n-1);
+            int recurse = prod(m, n - 1);
             int result = n * recurse;
             return result;
         }
