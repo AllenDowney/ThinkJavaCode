@@ -146,4 +146,5 @@ public class Series {
         System.out.println("fibonacci");
         System.out.println(fibonacci(3));
     }
+
 }

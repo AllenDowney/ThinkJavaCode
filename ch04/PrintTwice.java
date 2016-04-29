@@ -8,4 +8,5 @@ public class PrintTwice {
     public static void main(String[] args) {
         printTwice("Don't make me say this twice!");
     }
+
 }

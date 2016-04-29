@@ -1,20 +1,16 @@
 import java.awt.Canvas;
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
-
 import javax.swing.JFrame;
-
 
 public class Mickey extends Canvas {
 
-    // this is here to suppress a warning; you can read about it at
-    // http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html
-    static final long serialVersionUID = 1;
-
     public static void main(String[] args) {
-        JFrame frame = new JFrame("My Drawing");
+        JFrame frame = new JFrame("Mickey Mouse");
         Canvas canvas = new Mickey();
         canvas.setSize(400, 400);
+        canvas.setBackground(Color.white);
         frame.add(canvas);
         frame.pack();
         frame.setVisible(true);
@@ -23,6 +19,10 @@ public class Mickey extends Canvas {
     public void paint(Graphics g) {
         Rectangle bb = new Rectangle(100, 100, 200, 200);
         mickey(g, bb);
+    }
+
+    public void boxOval(Graphics g, Rectangle bb) {
+        g.fillOval(bb.x, bb.y, bb.width, bb.height);
     }
 
     public void mickey(Graphics g, Rectangle bb) {
@@ -39,7 +39,4 @@ public class Mickey extends Canvas {
         boxOval(g, half);
     }
 
-    public void boxOval(Graphics g, Rectangle bb) {
-        g.fillOval(bb.x, bb.y, bb.width, bb.height);
-    }
 }

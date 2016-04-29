@@ -10,4 +10,5 @@ public class SeriesTest extends TestCase {
         assertEquals(1, Series.fibonacci(2));
         assertEquals(2, Series.fibonacci(3));
     }
+
 }

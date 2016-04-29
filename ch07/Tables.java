@@ -153,4 +153,5 @@ public class Tables {
         System.out.println("printTable4");
         printTable4(6);
     }
+
 }

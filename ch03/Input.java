@@ -12,4 +12,5 @@ public class Input {
         double pi = 3.14159;
         double x = (int) pi * 20.0;
     }
+
 }

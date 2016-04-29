@@ -11,4 +11,5 @@ public class GuessStarter {
         int number = random.nextInt(100) + 1;
         System.out.println(number);
     }
+
 }

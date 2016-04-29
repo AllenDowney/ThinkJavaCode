@@ -18,4 +18,5 @@ public class Methods {
         double x3 = Math.exp(Math.log(10.0));
         double x4 = Math.pow(2.0, 10.0);
     }
+
 }

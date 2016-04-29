@@ -10,4 +10,5 @@ public class Goodbye {
         System.out.print("Goodbye, ");  // note the space
         System.out.println("cruel world");
     }
+
 }

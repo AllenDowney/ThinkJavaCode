@@ -15,4 +15,5 @@ public class NewLine {
         threeLine();
         System.out.println("Second line.");
     }
+
 }

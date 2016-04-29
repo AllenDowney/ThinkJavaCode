@@ -50,4 +50,5 @@ public class Validate {
         }
         return sum;
     }
+
 }

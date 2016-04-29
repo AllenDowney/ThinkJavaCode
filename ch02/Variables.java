@@ -6,7 +6,6 @@ public class Variables {
     public static void main(String[] args) {
 
         String message;
-
         int x;
 
         String firstName;
@@ -80,4 +79,5 @@ public class Variables {
         hour = minute + 1;  // correct
         // minute + 1 = hour;  // compiler error
     }
+
 }
