@@ -7,12 +7,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 public class CardTable extends Canvas {
+
     private Image[][] images;
     private int cardWidth, cardHeight;
-
-    // this long is here to suppress a warning; you can read about it at
-    // http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html
-    static final long serialVersionUID = 1;
 
     /**
      * Creates a CardTable.
@@ -29,7 +26,8 @@ public class CardTable extends Canvas {
             char c = suits.charAt(suit);
 
             for (int rank = 1; rank <= 13; rank++) {
-                String s = String.format("%s/%02d%c.gif", cardset, rank, c);
+                String s = String.format("%s/%02d%c.gif",
+                                         cardset, rank, c);
                 images[rank][suit] = new ImageIcon(s).getImage();
             }
         }
@@ -79,7 +77,7 @@ public class CardTable extends Canvas {
 
     public static void main(String[] args) {
         // make the frame
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame("Card Table");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // add the CardTable
@@ -91,4 +89,5 @@ public class CardTable extends Canvas {
         frame.pack();
         frame.setVisible(true);
     }
+
 }

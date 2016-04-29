@@ -46,9 +46,37 @@ public class Deck {
     }
 
     /**
+     * Returns a string representation of the deck.
+     */
+    public String toString() {
+        return Arrays.toString(this.cards);
+    }
+
+    /**
+     * Chooses a random number between low and high, including both.
+     */
+    public int randomInt(int low, int high) {
+        return 0;
+    }
+
+    /**
+     * Swaps the cards at indexes i and j.
+     */
+    public void swapCards(int i, int j) {
+    }
+
+    /**
      * Randomly permutes the array of cards.
      */
     public void shuffle() {
+    }
+
+    /**
+     * Finds the index of the lowest card
+     * between low and high inclusive.
+     */
+    public int indexLowest(int low, int high) {
+        return 0;
     }
 
     /**
@@ -69,6 +97,13 @@ public class Deck {
     }
 
     /**
+     * Combines two previously sorted subdecks.
+     */
+    public static Deck merge(Deck d1, Deck d2) {
+        return null;
+    }
+
+    /**
      * Returns a sorted copy of the deck using merge sort.
      */
     public Deck mergeSort() {
@@ -80,4 +115,5 @@ public class Deck {
      */
     public void insertionSort() {
     }
+
 }

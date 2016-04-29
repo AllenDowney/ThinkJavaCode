@@ -18,10 +18,32 @@ public class CardCollection {
     }
 
     /**
-     * Returns the label.
+     * Returns the label of the card collection.
      */
     public String getLabel() {
         return label;
+    }
+
+    /**
+     * Adds the given card to the collection.
+     */
+    public void addCard(Card card) {
+        cards.add(card);
+    }
+
+    /**
+     * Removes and returns the card with the given index.
+     */
+    public Card popCard(int i) {
+        return cards.remove(i);
+    }
+
+    /**
+     * Removes and returns the last card.
+     */
+    public Card popCard() {
+        int i = size() - 1;
+        return popCard(i);
     }
 
     /**
@@ -36,26 +58,6 @@ public class CardCollection {
      */
     public boolean empty() {
         return cards.size() == 0;
-    }
-
-    /**
-     * Randomly permute the cards.
-     */
-    public void shuffle() {
-        Random random = new Random();
-        for (int i = size() - 1; i > 0; i--) {
-            int j = random.nextInt(i);
-            swapCards(i, j);
-        }
-    }
-
-    /**
-     * Swaps the cards at indexes i and j.
-     */
-    public void swapCards(int i, int j) {
-        Card temp = cards.get(i);
-        cards.set(i, cards.get(j));
-        cards.set(j, temp);
     }
 
     /**
@@ -77,13 +79,6 @@ public class CardCollection {
     }
 
     /**
-     * Adds the given card to the collection.
-     */
-    public void addCard(Card card) {
-        cards.add(card);
-    }
-
-    /**
      * Returns the card with the given index.
      */
     public Card getCard(int i) {
@@ -99,18 +94,23 @@ public class CardCollection {
     }
 
     /**
-     * Removes and returns the card with the given index.
+     * Swaps the cards at indexes i and j.
      */
-    public Card popCard(int i) {
-        return cards.remove(i);
+    public void swapCards(int i, int j) {
+        Card temp = cards.get(i);
+        cards.set(i, cards.get(j));
+        cards.set(j, temp);
     }
 
     /**
-     * Removes and returns the last card.
+     * Randomly permute the cards.
      */
-    public Card popCard() {
-        int i = size() - 1;
-        return popCard(i);
+    public void shuffle() {
+        Random random = new Random();
+        for (int i = size() - 1; i > 0; i--) {
+            int j = random.nextInt(i);
+            swapCards(i, j);
+        }
     }
 
     /**
@@ -120,10 +120,4 @@ public class CardCollection {
         return label + ": " + cards.toString();
     }
 
-    /**
-     * Gets the internal cards array (should only be used for testing).
-     */
-    public Card[] getCards() {
-        return (Card[]) cards.toArray();
-    }
 }

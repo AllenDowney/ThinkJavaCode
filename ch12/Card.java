@@ -79,4 +79,5 @@ public class Card {
     public String toString() {
         return RANKS[this.rank] + " of " + SUITS[this.suit];
     }
+
 }

@@ -39,4 +39,5 @@ public class Test {
         deck.insertionSort();
         checkSorted(deck);
     }
+
 }

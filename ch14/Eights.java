@@ -41,17 +41,6 @@ public class Eights {
     }
 
     /**
-     * Displays the state of the game.
-     */
-    public void displayState() {
-        one.display();
-        two.display();
-        discardPile.display();
-        System.out.print("Draw pile: ");
-        System.out.println(drawPile.size() + " cards");
-    }
-
-    /**
      * Returns true if either hand is empty.
      */
     public boolean isDone() {
@@ -76,19 +65,6 @@ public class Eights {
     }
 
     /**
-     * One player takes a turn.
-     */
-    public void takeTurn(Player player) {
-        Card prev = discardPile.last();
-        Card next = player.play(this, prev);
-
-        System.out.println(player.getName() + " plays " + next);
-        System.out.println();
-
-        discardPile.addCard(next);
-    }
-
-    /**
      * Returns a card from the draw pile.
      */
     public Card draw() {
@@ -96,13 +72,6 @@ public class Eights {
             reshuffle();
         }
         return drawPile.popCard();
-    }
-
-    /**
-     * Waits for the user to press enter.
-     */
-    public void waitForUser() {
-        in.nextLine();
     }
 
     /**
@@ -114,6 +83,36 @@ public class Eights {
         } else {
             return one;
         }
+    }
+
+    /**
+     * Displays the state of the game.
+     */
+    public void displayState() {
+        one.display();
+        two.display();
+        discardPile.display();
+        System.out.print("Draw pile: ");
+        System.out.println(drawPile.size() + " cards");
+    }
+
+    /**
+     * Waits for the user to press enter.
+     */
+    public void waitForUser() {
+        in.nextLine();
+    }
+
+    /**
+     * One player takes a turn.
+     */
+    public void takeTurn(Player player) {
+        Card prev = discardPile.last();
+        Card next = player.play(this, prev);
+        discardPile.addCard(next);
+
+        System.out.println(player.getName() + " plays " + next);
+        System.out.println();
     }
 
     /**
@@ -142,4 +141,5 @@ public class Eights {
         Eights game = new Eights();
         game.playGame();
     }
+
 }

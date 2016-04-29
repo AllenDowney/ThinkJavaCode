@@ -102,13 +102,6 @@ public class Player {
     }
 
     /**
-     * Returns a string representation of the player.
-     */
-    public String toString() {
-        return name + ": " + hand;
-    }
-
-    /**
      * Displays the player's hand.
      */
     public void display() {
@@ -121,4 +114,5 @@ public class Player {
     public void displayScore() {
         System.out.println(name + " has " + score() + " points");
     }
+
 }
