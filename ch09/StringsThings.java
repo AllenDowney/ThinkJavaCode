@@ -3,18 +3,16 @@
  */
 public class StringsThings {
 
-    /**
-     * Reverses a string, returns a new String.
-     */
-    public static String reverse(String s) {
-        String r = "";
-        for (int i = s.length() - 1; i >= 0; i--) {
-            r = r + s.charAt(i);
-        }
-        return r;
-    }
-
     public static void main(String[] args) {
+
+        // Characters
+
+        String fruit = "banana";
+        char letter0 = fruit.charAt(0);
+
+        if (letter0 == 'a') {
+            System.out.println('?');
+        }
 
         System.out.print("Roman alphabet: ");
         for (char c = 'A'; c <= 'Z'; c++) {
@@ -27,6 +25,47 @@ public class StringsThings {
             System.out.print((char) i);
         }
         System.out.println();
+
+        // Strings are immutable
+
+        String name = "Alan Turing";
+        String upperName = name.toUpperCase();
+
+        String text = "Computer Science is fun!";
+        text = text.replace("Computer Science", "CS");
+
+        // String traversal
+
+        for (int i = 0; i < fruit.length(); i++) {
+            char letter = fruit.charAt(i);
+            System.out.println(letter);
+        }
+
+        for (char letter : fruit.toCharArray()) {
+            System.out.println(letter);
+        }
+
+        int length = fruit.length();
+        char last = fruit.charAt(length - 1);  // correct
+
+        System.out.println(reverse(fruit));
+
+        // Substrings
+
+        System.out.println(fruit.substring(0));
+        System.out.println(fruit.substring(2));
+        System.out.println(fruit.substring(6));
+
+        System.out.println(fruit.substring(0, 3));
+        System.out.println(fruit.substring(2, 5));
+        System.out.println(fruit.substring(6, 6));
+
+        // The indexOf method
+
+        int index = fruit.indexOf('a');
+        int index2 = fruit.indexOf('a', 2);
+
+        // String comparison
 
         String name1 = "Alan Turing";
         String name2 = "Ada Lovelace";
@@ -43,17 +82,24 @@ public class StringsThings {
             System.out.println("name2 comes before name1.");
         }
 
-        String fruit = "banana";
+        // Wrapper classes
 
-        for (int i = 0; i < fruit.length(); i++) {
-            char letter = fruit.charAt(i);
-            System.out.println(letter);
-        }
+        String str = "12345";
+        int num = Integer.parseInt(str);
 
-        for (char letter : fruit.toCharArray()) {
-            System.out.println(letter);
-        }
-
-        System.out.println(reverse(fruit));
+        num = 12345;
+        str = Integer.toString(num);
     }
+
+    /**
+     * Reverses a string, returns a new String.
+     */
+    public static String reverse(String s) {
+        String r = "";
+        for (int i = s.length() - 1; i >= 0; i--) {
+            r = r + s.charAt(i);
+        }
+        return r;
+    }
+
 }

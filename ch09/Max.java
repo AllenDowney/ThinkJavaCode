@@ -5,6 +5,9 @@ import java.util.Arrays;
  */
 public class Max {
 
+    /**
+     * Converts args to integers and prints the max.
+     */
     public static void main(String[] args) {
         System.out.println(Arrays.toString(args));
 
@@ -15,5 +18,7 @@ public class Max {
                 max = value;
             }
         }
+        System.out.println("The max is " + max);
     }
+
 }

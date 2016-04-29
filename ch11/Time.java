@@ -99,20 +99,4 @@ public class Time {
         }
     }
 
-    /**
-     * Test the methods in this class.
-     */
-    public static void main(String[] args) {
-        Time time = new Time(11, 59, 59.9);
-        System.out.println(time);
-
-        Time time1 = new Time(9, 30, 0.0);
-        Time time2 = time1;
-        Time time3 = new Time(9, 30, 0.0);
-
-        System.out.println(time1 == time2);
-        System.out.println(time1 == time3);
-        System.out.println(time1.equals(time2));
-        System.out.println(time1.equals(time3));
-    }
 }

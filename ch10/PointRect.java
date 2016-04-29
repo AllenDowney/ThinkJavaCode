@@ -6,6 +6,28 @@ import java.awt.Rectangle;
  */
 public class PointRect {
 
+    public static void main(String[] args) {
+        Point blank;
+        blank = new Point(3, 4);
+        System.out.println(blank);
+
+        int x = blank.x;
+        System.out.println(blank.x + ", " + blank.y);
+        int sum = blank.x * blank.x + blank.y * blank.y;
+
+        Rectangle box = new Rectangle(0, 0, 100, 200);
+        moveRect(box, 50, 100);
+        System.out.println(box);
+        box.translate(50, 100);
+
+        Rectangle box1 = new Rectangle(0, 0, 100, 200);
+        Rectangle box2 = box1;
+
+        System.out.println(box2.width);
+        box1.grow(50, 50);
+        System.out.println(box2.width);
+    }
+
     /**
      * Prints the attributes of a Point object.
      */
@@ -17,8 +39,8 @@ public class PointRect {
      * Computes the distance between two points.
      */
     public static double distance(Point p1, Point p2) {
-        double dx = (double) (p2.x - p1.x);
-        double dy = (double) (p2.y - p1.y);
+        int dx = p2.x - p1.x;
+        int dy = p2.y - p1.y;
         return Math.sqrt(dx * dx + dy * dy);
     }
 
@@ -40,22 +62,29 @@ public class PointRect {
     }
 
     /**
-     * Tests the methods in this class.
+     * Exercise on returning objects.
      */
-    public static void main(String[] args) {
-        Point blank;
-        blank = new Point(3, 4);
-        System.out.println(blank);
+    public static void exercise2() {
+        Point blank = new Point(5, 8);
 
-        Rectangle box = new Rectangle(0, 0, 100, 200);
-        moveRect(box, 50, 100);
-        System.out.println(box);
+        Rectangle rect = new Rectangle(0, 2, 4, 4);
+        Point center = findCenter(rect);
 
-        Rectangle box1 = new Rectangle(0, 0, 100, 200);
-        Rectangle box2 = box1;
-
-        System.out.println(box2.width);
-        box1.grow(50, 50);
-        System.out.println(box2.width);
+        double dist = distance(center, blank);
+        System.out.println(dist);
     }
+
+    /**
+     * Exercise on aliasing.
+     */
+    public static void exercise3() {
+        Rectangle box1 = new Rectangle(2, 4, 7, 9);
+        Point p1 = findCenter(box1);
+        printPoint(p1);
+
+        box1.grow(1, 1);
+        Point p2 = findCenter(box1);
+        printPoint(p2);
+    }
+
 }
