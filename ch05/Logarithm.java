@@ -6,11 +6,13 @@ public class Logarithm {
         System.out.println("printLogarithm");
         printLogarithm(3.0);
 
+        Scanner in = new Scanner(System.in);
+
         System.out.println("scandouble");
-        scanDouble();
+        scanDouble(in);
 
         System.out.println("scandouble2");
-        scanDouble2();
+        scanDouble2(in);
     }
 
     public static void printLogarithm(double x) {
@@ -22,15 +24,13 @@ public class Logarithm {
         System.out.println("The log of x is " + result);
     }
 
-    public static void scanDouble() {
-        Scanner in = new Scanner(System.in);
+    public static void scanDouble(Scanner in) {
         System.out.print("Enter a number: ");
         double x = in.nextDouble();
         printLogarithm(x);
     }
 
-    public static void scanDouble2() {
-        Scanner in = new Scanner(System.in);
+    public static void scanDouble2(Scanner in) {
         System.out.print("Enter a number: ");
         if (!in.hasNextDouble()) {
             String word = in.next();
