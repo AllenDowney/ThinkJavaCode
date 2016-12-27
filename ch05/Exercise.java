@@ -18,7 +18,7 @@ public class Exercise {
 
     public static void clink(int fork) {
         System.out.print("It's ");
-        zoop("breakfast ", fork) ;
+        zoop("breakfast ", fork);
     }
 
     public static void ping(String strangStrung) {

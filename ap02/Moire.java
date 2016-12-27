@@ -18,7 +18,7 @@ public class Moire extends Canvas {
     public void paint(Graphics g) {
         int i = 90;
         while (i < getWidth()) {
-            g.drawOval (0, 0, i, i);
+            g.drawOval(0, 0, i, i);
             i = i + 3;
         }
     }

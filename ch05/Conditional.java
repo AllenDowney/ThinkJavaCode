@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /**
  * Examples from Chapter 5.
  */
