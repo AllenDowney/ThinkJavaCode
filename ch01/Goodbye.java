@@ -9,6 +9,8 @@ public class Goodbye {
     public static void main(String[] args) {
         System.out.print("Goodbye, ");  // note the space
         System.out.println("cruel world");
+        System.out.println(" I'm off to join the circus.");
     }
 
 }
+
