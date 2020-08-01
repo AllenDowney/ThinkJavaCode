@@ -1,8 +1,8 @@
-public class Hello {
+ class Hello 
 
-    public static void main(String[] args) {
+      void mian(String[] args) {
         // generate some simple output
-        System.out.println("Hello, World!");
+        .out.print("Hello, World!");
     }
 
-}
+
