@@ -1,11 +1,20 @@
 import java.util.Scanner;
 import java.util.Random;
 
+/**
+*
+*This program will prompt the user to guess a random number, and it will try to make
+easer for the user guess it right.
+*
+**/
 public class Exer4 {
 		
-	
-    
-	public static void verifyGuess(int guess, int rand) {
+	/**
+	*
+	*if the user guess it right, this method will show a congratulations message
+	*
+	**/
+    public static void verifyGuess(int guess, int rand) {
 		
 		if (guess == rand) {
 			System.out.println("Parabens, voce acertou!");
@@ -28,8 +37,13 @@ public class Exer4 {
 		
 	}
 	
-
+	/**
+	*
+	*if the user dont't the get number right, this method will prompt him to try again
+	*
+	**/
     public static void tryAgain(int a, int b) {
+		
 		Scanner in = new Scanner(System.in);
 		int otherChance = a;
 		
@@ -40,6 +54,11 @@ public class Exer4 {
 	
     }
 	
+	/**
+	*
+	*Main method, all begins here
+	*
+	**/
 	public static void main (String[] args ) {
 		Random random = new Random();
 		Scanner in = new Scanner(System.in);
