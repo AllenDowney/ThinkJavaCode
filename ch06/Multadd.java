@@ -1,6 +1,6 @@
 public class Multadd {
     public static double multadd(double a, double b, double c) {
-        
+        //continuar segunda parte aqui
         return a * b + c;
     }
 
