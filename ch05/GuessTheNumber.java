@@ -7,7 +7,7 @@ import java.util.Random;
 easer for the user guess it right.
 *
 **/
-public class Exer4 {
+public class GuessTheNumber {
 		
 	/**
 	*
