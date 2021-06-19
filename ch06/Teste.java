@@ -1,5 +1,3 @@
-import javax.naming.spi.DirStateFactory.Result;
-
 public class Teste {
     /**
     * Tests whether x is a single digit integer.
